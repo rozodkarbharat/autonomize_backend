@@ -28,9 +28,9 @@ app.get("/", (req, res) => {
 
 
 
-app.listen(8000, () => {
+app.listen(5000, () => {
     try {
-        console.log("server running on 8000")
+        console.log("server running on 5000")
         connection
     }
     catch (e) {
