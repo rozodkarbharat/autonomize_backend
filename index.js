@@ -1,6 +1,7 @@
 const express = require("express");
 const connection = require("./db");
 const cors = require("cors");
+const userRoute = require("./Routes/user.route");
 
 
 const app = express();
@@ -10,6 +11,8 @@ app.use(cors({
     origin: "http://localhost:3000",
     credentials: true,
 }));
+
+app.use("/user",userRoute)
 
 
 app.get("/", (req, res) => {
